@@ -1,0 +1,50 @@
+.category_modal {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    border: 1px solid #DEDEDE;
+    border-top: none;
+    display: flex;
+    padding: 24px 0;
+
+    &_first {
+        border-right: 1px solid #DEDEDE;
+        width: 415px;
+        max-height: 500px;
+        overflow: auto;
+
+        &::-webkit-scrollbar {
+            width: 12px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            width: 12px;
+            background: #F5F5F5;
+        }
+
+        &::-webkit-scrollbar-track {
+            width: 12px;
+        }
+
+        &_text {
+            color: #000000;
+            font: 400 18px/21.09px 'Roboto';
+            padding: 12px 26px;
+            width: calc(100% - 12px);
+            margin: 0 auto;
+            transition: 0.2s;
+
+            &:hover {
+                border-radius: 12px;
+                background: #F5F5F5;
+            }
+        }
+
+        &_title {
+            color: #000000;
+            font: 600 18px/21.09px 'Roboto';
+            padding: 12px 32px;
+        }
+    }
+}

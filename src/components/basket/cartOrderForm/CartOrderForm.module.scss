@@ -1,0 +1,63 @@
+.cartOrderFormWrapper {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-radius: 4px;
+
+  .inputSection {
+    display: flex;
+    flex-direction: column;
+    width: min(30rem, 100%);
+    gap: 20px;
+  }
+
+  .inputBox {
+    width: 100%;
+    display: flex;
+    gap: 8px;
+    flex-direction: column;
+    textarea {
+      height: 7lh;
+      resize: none;
+      scrollbar-width: none;
+    }
+  }
+
+  .inputTitle { 
+    font-family: Roboto, sans-serif; 
+    font-size: 16px; 
+    font-weight: 400; 
+    line-height: 16px; 
+    text-align: left;
+    color: #3B3B3B;
+    span {
+      color: red;
+    }
+  }
+
+  .input {
+    max-width: 880px;
+    width: 100%;
+    height: 3em;
+    border: none;
+    font-size: 16px;
+    font-weight: 400;
+    border-radius: 1rem;
+    background: white;
+    outline: none;
+    padding: 1rem;
+    margin-bottom: 15px;
+  }
+}
+
+// .mainTitle {}
+
+@media screen and (max-width: 768px) {
+  .cartOrderFormWrapper {
+    .inputSection {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}

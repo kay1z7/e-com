@@ -1,0 +1,160 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    align-items: center;
+  
+    &_blocks {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      width: 100%;
+    }
+  
+    &_block {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+  
+      h3 {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+  
+        span {
+          padding: .6rem 1rem;
+          border-radius: 100%;
+          background-color: #384CFF;
+          color: white;
+        }
+      }
+  
+      &_desc {
+        grid-template-columns: 1fr 1fr;
+        display: grid;
+        color: #575757;
+        gap: .6rem;
+  
+        &_price {
+          display: flex;
+          justify-content: end;
+          color: #2567F9;
+        }
+      }
+  
+      &_item {
+        display: flex;
+        gap: 2rem;
+        padding-inline: 2rem;
+        &_desc {
+          display: flex;
+          gap: 2rem;
+          max-width: 20rem;
+          &_name {
+            display: flex;
+            flex-direction: column;
+            gap: .5rem;
+            font-weight: bold;
+            span {
+              font-weight: normal;
+              color: #757575;
+            }
+          }
+          &_price {
+            min-width: 5rem;
+            width: 100%;
+            padding-right: 3rem;
+            gap: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-weight: bold;
+            .buttonsContainer {
+              display: flex;
+              gap: 1.4rem;
+            }
+            
+            .subtractButton,
+            .quantity,
+            .addButton {
+              width: 33px;
+              height: 33px;
+              border-radius: 8px;
+              display: grid;
+              place-items: center;
+              border: none;
+              color: black;
+              font: 400 16px/19px "Roboto";
+              background: rgba(245, 245, 245, 1);
+              cursor: pointer;
+            }        
+            
+            .quantity {
+              border: 0;
+              border-radius: 0;
+              font-family: Roboto, sans-serif;
+              font-size: 16px;
+              font-weight: 400;
+              line-height: 19px;
+              text-align: left;
+              background: none;
+              width: 10px;
+            }
+          }
+        }
+  
+        img {
+          border-radius: .5rem;
+        }
+      }
+  
+      &_installment {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        color: #757575;
+        border: 2px solid #CCCCCC;
+        border-radius: .8rem;
+  
+        &_plan {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          border-radius: .8rem;
+          padding: .6rem .6rem;
+  
+          .active {
+            background-color: #5162FF;
+          }
+  
+          &_block {
+            border-radius: .4rem;
+            transition: all .2s ease;
+            flex-direction: column;
+            align-items: center;
+            cursor: pointer;
+            display: flex;
+            padding: .3rem 1.5rem;
+            gap: .1rem;
+  
+            &:hover {
+              color: white;
+              background: #5162FF;
+            }
+  
+            &.active {
+              color: white;
+              background: #5162FF;
+            }
+          }
+        }
+  
+        &_block {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          font-size: 1.3rem;
+        }
+      }
+    }
+  }

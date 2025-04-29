@@ -1,0 +1,125 @@
+.mobileCategories {
+    display: none;
+}
+
+@media (max-width: 767.98px) {
+    .mobileCategories {
+        position: absolute;
+        top: -14px;
+        height: 100vh;
+        width: calc(100% + 40px);
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        padding: 24px 70px 87px;
+        gap: 24px;
+        overflow: auto;
+        z-index: 2;
+        transition: 0.2s;
+
+        &::-webkit-scrollbar {
+            width: 12px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            width: 12px;
+            background: #F5F5F5;
+        }
+
+        &::-webkit-scrollbar-track {
+            width: 12px;
+        }
+
+        &_block {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid #DEDEDE;
+            padding: 0 0 16px 12px;
+
+            &_title {
+                font: 600 28px/32.81px 'Roboto';
+                color: #000;
+            }
+        }
+
+        &_blocks {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+
+            &_categories {
+                &_block {
+                    padding: 16px 12px;
+                    display: grid;
+                    grid-template-columns: 1fr 24px;
+                    gap: 16px;
+                    align-items: center;
+
+                    .subCategoriesBtn{
+                        background:none;
+                        border: none;
+                    }
+                }
+
+                &_text {
+                    font: 400 24px/28.13px 'Roboto';
+                    color: #000;
+                }
+            }
+
+            &_links {
+                display: flex;
+                flex-direction: column;
+                padding-left: 12px;
+                gap: 32px;
+
+                &_text {
+                    font: 400 24px/28.13px 'Roboto';
+                    color: #3B3B3B;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 575.98px) {
+    .mobileCategories {
+        top: -14px;
+        width: calc(100% + 40px);
+        padding: 34px 20px 39px;
+        gap: 20px;
+
+        &_block {
+            align-content: center;
+            padding: 12px 8px;
+
+            &_title {
+                font: 600 20px/23.44px 'Roboto';
+            }
+        }
+
+        &_blocks {
+            gap: 24px;
+
+            &_categories {
+                &_block {
+                    padding: 12px 8px;
+                    gap: 10px;
+                }
+
+                &_text {
+                    font: 400 18px/21.09px 'Roboto';
+                }
+            }
+
+            &_links {
+                padding-left: 8px;
+                gap: 24px;
+
+                &_text {
+                    font: 400 18px/21.09px 'Roboto';
+                }
+            }
+        }
+    }
+}

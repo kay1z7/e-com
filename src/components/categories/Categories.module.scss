@@ -1,0 +1,48 @@
+.categories {
+    width: 100%;
+    padding: 52px 20px 0 20px;
+    z-index: 20;
+
+    &_wrapper {
+        max-width: 1300px;
+        margin: 0 auto;
+
+        &_length {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            gap: 0px;
+            max-width: 393px;
+            width: 100%;
+        }
+
+        &_list {
+            display: flex;
+            align-items: flex-end;
+            gap: 8px;
+            cursor: pointer;
+            position: relative;
+        }
+
+        &_icon {
+            width: 24px;
+            height: 24px;
+        }
+
+        &_link,
+        &_text {
+            color: #000;
+            font: 400 18px/21.09px 'Roboto';
+
+            &:hover {
+                color: #12589C;
+            }
+        }
+    }
+}
+
+@media (max-width: 767.98px) {
+    .categories {
+        display: none;
+    }
+}

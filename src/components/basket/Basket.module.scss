@@ -1,0 +1,372 @@
+.basketProductCardMobile {
+  display: none;
+}
+
+.basketTextBox {
+  display: grid;
+  gap: 20px;
+  margin-bottom: 20px;
+  grid-template-columns: 1.5fr 1fr 0.75fr;
+
+  .price {
+    text-align: right;
+    padding-right: 54px;
+  }
+}
+
+.bothCards {
+  margin-top: 30px;
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  @media screen and (max-width: 1160px) {
+    flex-wrap: wrap;
+  }
+
+  .rightSideWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 70%;
+    @media screen and (max-width: 1160px) {
+      width: 100%;
+    }
+  }
+
+  .rightSide {
+    max-width: 920px;
+    width: 100%;
+    min-height: 420px;
+    border-radius: 8px;
+    @media screen and (max-width: 1160px) {
+      max-width: none;
+      width: 100%;
+    }
+  }
+
+  .leftSide {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    background-color: white;
+    border: 1px solid rgba(255, 255, 255, 1);
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.15);
+    border-radius: 16px;
+    padding: 24px;
+    height: fit-content;
+
+    .detailOrder {
+      width: 332px;
+      height: 219px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      border-radius: 4px;
+      background: white;
+
+      .detailOrderTitle {
+        font-family: Roboto, sans-serif;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 19px;
+        text-align: left;
+      }
+
+      .detailOrderTextBox {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .detailOrderText {
+        font-family: Roboto, sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 16px;
+        text-align: left;
+      }
+
+      .detailOrderSpan {
+        font-family: Roboto, sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 16px;
+        text-align: left;
+        color: #a5a5a5;
+      }
+    }
+
+    .list {
+      width: 332px;
+      border-radius: 8px;
+      font: 600 20px/21px "Roboto";
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+    }
+
+
+    .leftSideListItem {
+      display: flex;
+      justify-content: space-between;
+      width: 295px;
+      padding: 12px 0;
+
+      & p {
+        font-family: Roboto, sans-serif;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 23px;
+        text-align: left;
+      }
+
+      & .leftSideListItemTitle {
+        color: #898989;
+      }
+
+      & .leftSideListItemPrice {
+        color: #000000;
+      }
+
+      & .leftSideListItemDeliveryPrice {
+        color: #009C4D;
+      }
+
+      & .leftSideListItemTotal {
+        color: #384CFF;
+        font-family: Roboto, sans-serif;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 23px;
+        text-align: left;
+      }
+    }
+
+    & .orderButton {
+      padding: 13px;
+      gap: 16px;
+      border-radius: 16px;
+      background: #384CFF;
+      font-family: Roboto;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 18.75px;
+      text-align: left;
+      color: rgba(255, 255, 255, 1);
+      border: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+    }
+  }
+}
+
+.basketWraper {
+  flex-direction: column;
+  gap: 22px;
+  display: flex;
+}
+
+.basketProductCard {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  border: 1px solid rgba(222, 222, 222, 1);
+  border-radius: 16px;
+  padding: 1.8rem;
+  min-height: 9em;
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.15);
+}
+
+.basketProductCard_imageBox {
+  display: flex;
+  gap: 20px;
+  & img {
+    max-width: 8em;
+    max-height: 10em;
+  }
+}
+
+.basketProductCardContentBox {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.productImage {
+  object-fit: contain;
+  height: 7em;
+}
+
+.productTitle {
+  font: 600 18px/21px "Roboto";
+  color: black;
+}
+
+.productCategory {
+  color: #898989;
+  font: 400 16px/19px "Roboto";
+}
+
+.productRating {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.buttonsContainer {
+  display: flex;
+  padding-inline: 2rem;
+  gap: 1.8rem;
+}
+
+.subtractButton,
+.quantity,
+.addButton {
+  width: 33px;
+  height: 33px;
+  border-radius: 8px;
+  display: grid;
+  place-items: center;
+  border: none;
+  color: black;
+  font: 400 16px/19px "Roboto";
+  background: rgba(245, 245, 245, 1);
+  cursor: pointer;
+}
+
+
+
+.quantity {
+  border: 0;
+  border-radius: 0;
+  font-family: Roboto, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  text-align: left;
+  background: none;
+  width: 10px;
+}
+
+.priceContainer {
+  display: flex;
+
+  justify-content: flex-end;
+  gap: 59px;
+
+}
+
+.productPrice {
+  font: 600 18px/21px "Roboto";
+  color: black;
+  display: flex;
+  width: 120px;
+  flex-direction: column;
+
+  & span {
+    display: block;
+    font: 400 16px/19px "Roboto";
+    text-align: left;
+    color: #a5a5a5;
+    text-decoration: line-through;
+  }
+}
+
+.trashIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  & div svg {
+    cursor: pointer;
+
+  }
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+@media screen and (max-width: 550px) {
+  .bothCards {
+    .rightSide {
+      display: none;
+    }
+    .leftSide {
+      box-shadow: none;
+      padding: 15px;
+      max-width: 100%;
+    }
+  }
+
+  .basketProductCardMobile {
+    margin: 0 auto;
+    background: white;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    max-width: 100%;
+    // width: 356px;
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(222, 222, 222, 1);
+    border-radius: 16px;
+    flex-wrap: wrap;
+
+    .basketProductCardMobileInfoBox {
+      display: flex;
+      gap: 16px;
+      img {
+        max-width: 7em;
+      }
+    }
+
+    .basketProductCardMobileInfo {
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .productPrice {
+      display: flex;
+      justify-content: space-between;
+
+      .productPriceMobile {
+        font-family: Roboto;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 18.75px;
+        text-align: left;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .bothCards {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .rightSideWrapper {
+      width: 100%;
+    }
+
+    .leftSide {
+      width: unset;
+    }
+  }
+}

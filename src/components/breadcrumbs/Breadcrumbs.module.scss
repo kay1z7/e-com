@@ -1,0 +1,16 @@
+.breadcrumbs {
+    &_last {
+        color: #384CFF;
+        font: 400 16px/18.75px 'Roboto';
+    }
+
+    &_link {
+        color: #757575;
+        font: 400 16px/18.75px 'Roboto';
+        transition: 0.2s;
+
+        &:hover {
+            color: #384CFF;
+        }
+    }
+}

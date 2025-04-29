@@ -1,0 +1,193 @@
+.payment_wrapper {
+    margin-top: 1rem;
+    display: flex;
+    gap: 6rem;
+    flex-wrap: wrap;
+}
+.payment_method {
+    margin-top: 1.4rem;
+    display: flex;
+    flex-direction: column;
+    width: 30rem;
+    gap: 2rem;
+    .select {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #F5F5F5;
+        border-radius: 1rem;
+        padding: .8rem 1.2rem;
+        .chose {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-size: 1.4rem;
+            input {
+                z-index: 0;
+                transform: scale(1.5);
+                cursor: pointer;
+            }
+        }
+    }
+    .installment {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        &_plan {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #F5F5F5;
+            border-radius: .8rem;
+            padding: .4rem 1rem;
+            .active {
+                background-color: #1E90FF;
+            }
+            &_block {
+                border-radius: .4rem;
+                transition: all .2s ease;
+                cursor: pointer;
+                display: flex;
+                padding: .6rem 1rem;
+                gap: 1rem;
+                &:hover {
+                    color: white;
+                    background: #1e8fff93;
+                }
+                &.active {
+                    color: white;
+                    background: #1E90FF;
+                }
+            }
+        }
+        &_block {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 1.3rem;
+        }
+    }
+}
+
+.leftSide {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    border: 1px solid rgba(255, 255, 255, 1);
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.15);
+    border-radius: 16px;
+    padding: 24px;
+    height: fit-content;
+
+    .detailOrder {
+        width: 332px;
+        height: 219px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        border-radius: 4px;
+        background: white;
+
+        .detailOrderTitle {
+            font-family: Roboto, sans-serif;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 19px;
+            text-align: left;
+        }
+
+        .detailOrderTextBox {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .detailOrderText {
+            font-family: Roboto, sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 16px;
+            text-align: left;
+        }
+
+        .detailOrderSpan {
+            font-family: Roboto, sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 16px;
+            text-align: left;
+            color: #a5a5a5;
+        }
+    }
+
+    .list {
+        width: 332px;
+        //height: 191px;
+        border-radius: 8px;
+        background: white;
+        font: 600 20px/21px "Roboto";
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        @media (max-width: 509px) {
+            gap: 1rem;
+            max-width: max-content;
+        }
+    }
+
+    .leftSideListItem {
+        display: flex;
+        justify-content: space-between;
+        width: 295px;
+        padding: 12px 0;
+
+        & p {
+            font-family: Roboto, sans-serif;
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 23px;
+            text-align: left;
+        }
+
+        & .leftSideListItemTitle {
+            color: #898989;
+        }
+
+        & .leftSideListItemPrice {
+            color: #000000;
+        }
+
+        & .leftSideListItemTotal {
+            color: black;
+            font-family: Roboto, sans-serif;
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 23px;
+            text-align: left;
+        }
+    }
+
+    & .orderButton {
+        padding: 13px;
+        gap: 16px;
+        border-radius: 16px;
+        background: rgba(30, 144, 255, 1);
+        font-family: Roboto;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 18.75px;
+        text-align: left;
+        color: rgba(255, 255, 255, 1);
+        border: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+    @media (max-width: 509px) {
+        gap: 0px;
+        padding: 0;
+        box-shadow: none;
+    }
+}

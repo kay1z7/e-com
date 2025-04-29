@@ -1,0 +1,16 @@
+.credit_info_wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    font-size: 1.1rem;
+    .text {
+        max-width: min(80%, 40rem);
+        line-height: 1.8rem;
+    }
+    ul {
+        padding-left: 2rem;
+    }
+    li {
+        list-style-type: disc;
+    }
+}

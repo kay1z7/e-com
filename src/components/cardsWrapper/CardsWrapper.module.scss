@@ -1,0 +1,50 @@
+.cards {
+    width: 100%;
+
+    &_title {
+        margin-bottom: 24px;
+        font: 700 32px/37.5px 'Roboto';
+        color: #181818;
+    }
+
+    &_cards {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 40px 20px;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .cards {
+        &_cards {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+}
+
+@media (max-width: 767.98px) {
+    .cards {
+        &_title {
+            margin-bottom: 26px;
+            font: 700 28px/32.81px 'Roboto';
+        }
+
+        &_cards {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+}
+
+@media (max-width: 575.98px) {
+    .cards {
+        &_title {
+            margin-bottom: 16px;
+            font: 700 24px/28.13px 'Roboto';
+        }
+
+        &_cards {
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+}

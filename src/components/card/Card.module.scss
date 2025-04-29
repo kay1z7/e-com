@@ -1,0 +1,154 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 16px;
+  width: 100%;
+
+  &_link {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+  }
+
+  &_background {
+
+    background: #ffff;
+    border-radius: 16px;
+    overflow: hidden;
+/*     max-height: 369px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+  }
+
+  &_img {
+    object-fit: contain;
+
+  }
+
+  &_info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  &_name {
+    font: 600 16px/18.75px 'Roboto';
+    color: #000000;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 285px;
+  }
+
+  &_category {
+    font: 400 16px/18.75px 'Roboto';
+    color: #949494;
+  }
+
+  &_stars {
+    display: flex;
+    align-items: center;
+    gap: 1px;
+
+    &>svg {
+      width: 18px;
+      height: 18px;
+    }
+
+    &_text {
+      padding-left: 4px;
+      font: 400 14px/16.41px 'Roboto';
+      color: #000000;
+    }
+  }
+
+  &_backet {
+    font-weight: 600;
+    background-color: #CBDCFE;
+    color: #384CFF;
+    &>svg {
+      min-width: 24px;
+    }
+    &:disabled {
+      background-color: #CCCCCC;
+      color: #FFFFFF;
+    }
+    
+  }
+
+  &_buy_now {
+    color: #384CFF;
+    font-weight: 600;
+  }
+
+  &_price {
+    font: 600 18px/21.09px 'Roboto';
+    color: #000000;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .card {
+    gap: 8px;
+
+    &_background {
+/*       max-height: 160px; */
+    }
+
+    &_name {
+      font: 600 14px/16.41px 'Roboto';
+    }
+
+    &_category {
+      font: 400 14px/16.41px 'Roboto';
+    }
+
+    &_stars {
+      &>svg {
+        width: 16px;
+        height: 16px;
+      }
+
+      &_text {
+        padding-left: 3px;
+      }
+    }
+
+    &_backet {
+      margin-top: 8px;
+
+      &>svg {
+        display: none;
+      }
+    }
+
+    &_price {
+      font: 600 16px/18.75px 'Roboto';
+    }
+  }
+}
+
+@media (max-width: 575.98px) {
+  .card {
+    gap: 9px;
+    width: calc(50% - 10px);
+
+    &_background {
+      max-height: 167px;
+    }
+
+    &_img {
+      object-fit: contain;
+      width: 100%;
+      height: 100%;
+    }
+
+    &_backet {
+      margin-top: 3px;
+    }
+  }
+}
