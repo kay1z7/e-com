@@ -1,0 +1,199 @@
+/* VerificationCodeForm.module.scss */
+.codeFormModal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+
+  z-index: 111;
+  & h2 {
+    font-weight: 300;
+  }
+}
+.heading{
+  font-family: Roboto;
+  font-size: 20px;
+  font-weight: 400; 
+  line-height: 28px;  
+  text-align: center;
+  span{
+    font-weight: 600;
+  }
+}
+.codeFormModalBox {
+  background: white;
+  opacity: 1;
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  border-radius: 16px;
+  width: 474px;
+}
+.codeForm {
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 65px;
+  // max-width: 1000px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 32px;
+
+  & h2 {
+    font-weight: 300;
+  }
+}
+.shrinkable {
+  transition: transform 100ms linear;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  margin: 0 auto;
+  display: flex;
+  gap: 10px;
+
+  &.shrink {
+    transform: scale(0.9);
+  }
+}
+
+#code {
+  transition: transform 100ms linear;
+  gap: 10px;
+}
+
+#feedback {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 0;
+  overflow: hidden;
+
+  #feedbackImage {
+    width: 60px;
+    padding: 30px;
+  }
+
+  .growable {
+    transform: scale(0.5);
+    opacity: 0;
+    transition: transform 350ms, opacity 350ms;
+    transition-timing-function: cubic-bezier(0.46, 0.03, 0, 1.58);
+
+    &.grow {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+}
+
+.button_wrapper {
+  input[type="button"] {
+    outline: none;
+    border: none;
+    background-color: transparent;
+    font-family: inherit;
+    text-transform: uppercase;
+    color: inherit;
+    cursor: pointer;
+
+    &#sendButton {
+      padding: 6px 9px;
+      border-radius: 3px;
+      font-size: 20px;
+      border: 1px solid #ddd;
+
+      &:hover {
+        background-color: rgba(128, 128, 128, 0.5);
+      }
+    }
+  }
+}
+
+.input {
+  border: 1px solid #E0E0E0;
+  border-radius: 12px;
+  width: 48px;
+  height: 48px;
+  font-family: Manrope;
+  font-size: 16px;
+  font-weight: 400; 
+  line-height: 22.4px;
+  text-align: center;
+  background-color: rgba(245, 245, 245, 1);
+  &:focus {
+    border: 1.5px solid rgba(30, 144, 255, 1);
+    background-color: white;
+    outline: none;
+  }
+
+  &:not(:placeholder-shown) {
+    border: 1.5px solid rgba(30, 144, 255, 1);
+    background-color: white;
+
+  }
+
+  &.error {
+    border: 1px solid red;
+  }
+
+  &:disabled {
+    color: #222;
+    background-color: #fff;
+  }
+}
+.countDown {
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #949494;
+}
+.codeFormFooter {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.sendButton {
+  width: 100%;
+  height: 60px;
+  cursor: pointer;
+  background: rgba(30, 144, 255, 1);
+  border:none;
+  border-radius: 16px;
+  font-size: 18px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  color: #fff;
+  &:hover {
+    background: rgba(68, 163, 255, 1);
+  }
+}
+
+.sendAgainButton {
+  border: none;
+  color: rgba(30, 144, 255, 1);
+  border-radius: 8px;
+  background: none;
+  cursor: pointer;
+  font-family: Roboto;
+  padding: 0;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 22.4px;
+  text-align: center;
+  &:hover {
+    color: rgba(68, 163, 255, 1);
+  }
+}

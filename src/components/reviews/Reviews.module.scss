@@ -1,0 +1,135 @@
+.review {
+    &_empty {
+        font: 600 24px/28.13px 'Roboto';
+        padding: 30px 0;
+        min-width: 200px;
+
+        text-align: center;
+        margin: 0 auto;
+    }
+    &_title {
+        font: 600 24px/28.13px 'Roboto';
+        border-bottom: 2px solid #B0B0B0;
+        width: fit-content;
+        margin-bottom: 24px;
+        color: #000000;
+    }
+    &_cards {
+        margin-top: 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: space-between;
+        &_card {
+            max-width: 24rem;
+        }
+    }
+
+    &_header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &_edit {
+            color: #000000;
+            font: 400 16px/18.75px 'Roboto';
+            padding: 0;
+            min-height: auto;
+        }
+
+        &_stars {
+            display: flex;
+            align-items: flex-end;
+            gap: 4px;
+        }
+
+        &_count {
+            font: 600 24px/28.13px 'Roboto';
+            color: #000000;
+            margin-right: 6px;
+        }
+
+        &_block_start {
+            display: flex;
+            align-items: center;
+
+            svg {
+                width: 24px;
+                height: 24px;
+            }
+        }
+
+        &_count_text {
+            font: 400 18px/28.13px 'Roboto';
+            color: #999999;
+            margin-left: 16px;
+        }
+    }
+
+    &_swiper {
+        margin-top: 14px;
+        position: relative;
+
+        &:hover>&_btn_next {
+            display: flex;
+        }
+
+        &:hover>&_btn_prev {
+            display: flex;
+        }
+
+        &_btn_next {
+            display: none;
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+            z-index: 2;
+        }
+
+        &_btn_prev {
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%) rotate(-180deg);
+            z-index: 2;
+        }
+    }
+
+    &_all {
+        margin-top: 32px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .review {
+        &_title {
+            font: 600 18px/21.13px 'Roboto';
+            margin-bottom: 16px;
+        }
+    
+        &_header {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 10px;
+    
+            &_edit {
+                font: 400 16px/18.75px 'Roboto';
+                margin-left: auto;
+            }
+    
+            &_count {
+                font: 600 18px/21.13px 'Roboto';
+            }
+    
+            &_count_text {
+                font: 400 16px/18.75px 'Roboto';
+            }
+        }
+    
+        &_all {
+            width: 100% !important;
+        }
+    }
+}

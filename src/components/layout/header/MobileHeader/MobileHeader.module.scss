@@ -1,0 +1,87 @@
+.header_mobile {
+    display: none;
+    position: relative;
+}
+
+@media (max-width: 767.98px) {
+    .header_mobile {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &_logo {
+            &>svg {
+                width: 145px !important;
+                height: 24px !important;
+            }
+
+            font: 700 26px/31.69px 'Montserrat'
+        }
+
+        &_block {
+            display: flex;
+            gap: 32px;
+            align-items: center;
+            @media (max-width: 575.98px) {
+                gap: 4px;
+            }
+            & span {
+                position: absolute;
+                background: rgba(30, 144, 255, 1);
+                width: 15px;
+                height: 15px;
+                top: 1px;
+                right: 142px;
+                font: 400 8px/11.2px 'Roboto';
+                color: white;
+                border-radius: 100px;
+                display: flex;
+                align-items: center;
+                text-align: center;
+                justify-content: center;
+                @media (max-width: 575.98px) {
+                    right: 85px;
+                }
+            }
+        }
+
+        &_button {
+            height: 34px;
+            width: 38px;
+            &>svg {
+                width: 24px;
+                height: 24px;
+
+                &>path {
+                    stroke: black;
+                }
+            }
+        }
+        .dropdown_wrapper{
+            position: relative;
+            display: inline-block;
+            height: 100%;
+            .dropdown_list{
+                font-family: Roboto;
+                font-weight: 400;
+                position: absolute;
+                border: 1px solid #DEDEDE;
+                min-width: 300px;
+                padding: 10px 24px;
+                border-radius: 16px;
+                right: 0;
+                font-size: 18px;
+                background-color:#FFFFFF;
+                z-index: 1;
+                li {
+                    cursor: pointer;
+                    padding: 12px 0;
+                  
+                }
+            }
+            .logout {
+                color: #DA101C;
+            }
+        }
+    }
+}

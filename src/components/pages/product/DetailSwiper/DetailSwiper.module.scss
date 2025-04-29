@@ -1,0 +1,141 @@
+.detail_info_imgs {
+  height: 500px;
+  display: flex;
+  gap: 20px;
+
+  &_column {
+    position: relative;
+    width: 82px;
+    height: 100%;
+  }
+
+  &_btn_next {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    z-index: 10;
+    transform: rotate(180deg) translateX(50%);
+  }
+
+  &_btn_prev {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    z-index: 10;
+    transform: translateX(-50%);
+  }
+
+  &_swiper_vertical {
+    height: 100%;
+
+    img {
+      width: 100%;
+      height: auto;
+      padding: 11px 8px;
+      border-radius: 16px;
+      background: #f5f5f5;
+    }
+  }
+
+  &_card {
+    height: 500px;
+    max-width: 386px;
+    width: 100%;
+
+    img {
+      width: 100%;
+      height: auto;
+      padding: 11px 8px;
+      border-radius: 16px;
+      background: #f5f5f5;
+      object-fit: cover;
+    }
+  }
+
+  &_main {
+    position: relative;
+
+    &_btn_next {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%) rotate(90deg);
+      transition: 0.2s;
+      z-index: -1;
+    }
+
+    &_btn_prev {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%) rotate(-90deg);
+      transition: 0.2s;
+      z-index: -1;
+    }
+
+    &:hover > &_btn_prev {
+      z-index: 2;
+    }
+
+    &:hover > &_btn_next {
+      z-index: 2;
+    }
+  }
+}
+
+@media (max-width: 526.98px) {
+    .detail_info_imgs {
+        height: 350px;
+        width: 100%;
+
+        &_column {
+          display: none;
+        }
+      
+        &_card {
+          height: 100%;
+          img {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+
+            border-radius: 0;
+            background-color: white;
+            object-fit: contain;
+          }
+        }
+      
+        &_main {
+          position: relative;
+          width: 100%;
+          padding: 0;
+          border-radius: 16px;
+          overflow: hidden;
+          &_btn_next {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%) rotate(90deg);
+            transition: 0.2s;
+            z-index: -1;
+          }
+      
+          &_btn_prev {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%) rotate(-90deg);
+            transition: 0.2s;
+            z-index: -1;
+          }
+      
+          &:hover > &_btn_prev {
+            z-index: 2;
+          }
+      
+          &:hover > &_btn_next {
+            z-index: 2;
+          }
+        }
+      }
+}

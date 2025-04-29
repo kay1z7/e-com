@@ -1,0 +1,75 @@
+.mobileSearch{
+    height: 100vh;
+    width: 100%;
+    z-index: 1;
+    overflow: hidden;
+    .mobileSearchWrapper{
+        display: flex;
+        align-items:center;
+        gap: 12px;
+        padding: 20px 0;
+        .mobileSearchPanel{
+            width: 100%;
+            position: relative;
+            .searchInput {
+                background-color: #F5F5F5;
+                border: none;
+                width: 100%;
+                font-size: 1.4em;
+                padding: 1em 40px 1em 25px;
+                border-radius: 16px;
+                font-family: Roboto;
+                outline: 0;
+                ::placeholder{
+                    color: #B0B0B0;
+
+                }
+
+            }
+            .searchInputBtn {
+                position: absolute;
+                border: none;
+                background: none;
+                top: 7.5px;
+                right: 15px;
+            }
+        }
+        .cancelWrapper {
+            .cancelBtn {
+                background: none;
+                border:none;
+                font-size: 14px;
+            }
+        }
+    }
+    .mobileHistoryList{
+
+        width: 100%;                
+        font-family: Roboto;
+        font-weight: 400;
+        font-size: 14px;
+
+        li{
+            display: flex;
+            justify-content: space-between;
+            align-items:center;
+            padding: 10px 3px;
+            cursor: pointer;
+            width: 100%;
+            border-radius: 12px;
+            .mobileHistoryWrapper{
+                width: 95%;
+                display: flex;
+                gap: 8px;
+                align-items:center;
+                &>svg {
+                    width: 24px;
+                    height: 24px;
+                }
+            }
+            &:hover{
+               background-color:#f8f8f8; 
+            }
+        }
+    }
+}

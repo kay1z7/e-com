@@ -1,0 +1,27 @@
+.layout {
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    min-height: 100vh;
+
+    &_fixed_block {
+        margin-top: 77px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .layout {
+        &_fixed_block {
+            margin-top: 60px;
+        }
+    }
+}
+
+@media (max-width: 575.98px) {
+    .layout {
+        &_fixed_block {
+            margin-top: 58px;
+        }
+    }
+}

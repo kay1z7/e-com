@@ -1,0 +1,11 @@
+.main {
+    width: 100%;
+    padding: 60px 20px 70px;
+    overflow: hidden;
+    min-height: 1200px;
+
+    &_wrapper {
+        max-width: 1300px;
+        margin: 0 auto;
+    }
+}

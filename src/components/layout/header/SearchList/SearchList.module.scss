@@ -1,0 +1,52 @@
+.history_list{
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 70px;
+    width: 100%;
+    z-index: 1;
+    border: 1px solid #DEDEDE;
+    background-color:#FFFFFF;
+    border-radius: 16px;
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 16px;
+    padding: 16px;
+
+    li{
+        display: flex;
+        justify-content: space-between;
+        align-items:center;
+        padding: 10px 3px;
+        cursor: pointer;
+        width: 100%;
+        border-radius: 12px;
+        .history_wrapper{
+            display: flex;
+            justify-content: space-between;
+            align-items:center;
+            div {
+                &>svg {
+                    width: 24px;
+                    height: 24px;
+                }
+            }
+            span {
+                margin-left: 10px;
+            }
+        }
+        &:hover{
+           background-color:#f8f8f8; 
+        }
+    }
+}
+
+@media (max-width: 767.98px)  {
+    .history_list{
+        position:static;
+        font-size: 14px;
+        border: none;
+        padding: 0px;
+    }
+
+}

@@ -1,0 +1,398 @@
+.detail {
+    width: 100%;
+    padding: 24px 20px 80px;
+    position: relative;
+  
+    &_wrapper {
+      max-width: 1300px;
+      margin: 0 auto;
+    }
+  
+    &_info {
+      margin-top: 32px;
+      display: grid;
+      grid-template-columns: 1fr 285px;
+      gap: 40px;
+  
+      &_column {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+  
+      &_descr {
+        width: calc(100% - 509px);
+        &_name {
+          font: 700 24px/28.13px "Roboto";
+          color: #000000;
+        }
+  
+        &_link {
+          margin: 16px 0;
+          display: flex;
+          flex-direction: column;
+          gap: 4px;
+  
+          &_company {
+            svg {
+              width: 24px;
+              height: 24px;
+            }
+  
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font: 400 18px/21.09px "Roboto";
+            color: #000000;
+          }
+  
+          &_brend {
+            font: 400 18px/21.09px "Roboto";
+            color: #757575;
+          }
+        }
+  
+        &_block {
+          display: flex;
+          align-items: flex-end;
+          gap: 16px;
+  
+          &_star {
+            display: flex;
+            align-items: flex-end;
+            gap: 4px;
+            color: #000;
+            font: 400 18px/21.09px "Roboto";
+          }
+  
+          &_reviews {
+            font: 400 18px/21.09px "Roboto";
+            color: #757575;
+            text-decoration: underline;
+          }
+        }
+  
+        &_detail {
+          margin-top: 24px;
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
+  
+          &_modal {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            border-bottom: 1px solid #B0B0B0;
+            padding-bottom: .6rem;
+            &_name {
+              color: #949494;
+            }
+            &_descr {
+              text-align: right;
+            }
+          }
+          &_block {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+  
+            &_name {
+                font: 400 1.3rem/1.4rem 'Roboto';
+                color: #757575;
+            }
+  
+            &_descr {
+                font: 400 1.3rem/1.4rem 'Roboto';
+                color: #000;
+                
+            }
+          }
+          span {
+            cursor: pointer;
+            color: #949494;
+          }
+          &_title {
+            font: 500 18px/21.09px "Roboto";
+            color: #000000;
+          }
+          &_descr {
+            font: 400 16px/22px "Roboto";
+            color: #000000;
+          }
+  
+          &_view {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            &_title {
+              padding: 0;
+              text-decoration: underline;
+              font: 400 18px/21.09px "Roboto";
+              color: #384CFF;
+            }
+          }
+        }
+      }
+  
+      &_btns:nth-child(2) {
+        padding: 1rem;
+        gap: .8rem;
+      }
+      &_btns {
+        background: #ffffff;
+        box-shadow: 0px 0px 4px 0px #00000026;
+        width: 285px;
+        min-width: 285px;
+        height: fit-content;
+        padding: 40px 20px;
+        gap: 20px;
+        display: flex;
+        flex-direction: column;
+        border-radius: 16px;
+        &_text {
+          display: flex;
+          flex-direction: column;
+          gap: .4rem;
+          line-height: 1.4rem;
+          &_green {
+            color: #009C4D;
+          }
+        }
+  
+        &_custom {
+          display: flex;
+          gap: .5rem;
+          justify-content: center;
+          border-radius: 16px;
+          padding: 1.1rem 0;
+          box-shadow: 0px 0px 4px 0px #00000026;
+          span {
+            color: #1E90FF;
+          }
+        }
+        &_wrap {
+          display: flex;
+          flex-direction: column;
+          gap: 1.2rem;
+        }
+        &_price {
+          display: flex;
+          gap: 16px;
+          align-items: center;
+          font: 700 24px/28.13px "Roboto";
+          color: #DA101C;
+  
+          &_line {
+            font: 400 20px/23.44px "Roboto";
+            color: black;
+            text-decoration: line-through;
+          }
+        }
+  
+        &_block {
+          display: flex;
+          flex-direction: column;
+          gap: 16px;
+  
+          &_icon {
+            font: 600 16px/18.75px "Roboto";
+            padding: 10px 0;
+  
+            svg {
+              width: 24px;
+              height: 24px;
+            }
+          }
+        }
+      }
+      &_btns:first-child {
+        @media (max-width: 425px) {
+          display: none;
+        }
+      }
+    }
+    &_modal_footer {
+      display: none;
+    }
+    @media (max-width: 425px) {
+      &_modal_footer {
+        z-index: 1000;
+        padding: 1rem 2rem;
+        border-top: 1px solid #B0B0B0;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+        position: fixed;
+        width: 100%;
+        bottom: 75px;
+        left: 0;
+        background-color: #fff;
+  
+        &_price {
+            display: flex;
+            flex-direction: column;
+            font: 700 1.6rem/2rem 'Roboto';
+            /* color: #1E90FF; */
+            color: #DA101C;
+  
+            span {
+                font: 400 1.2rem/1.4rem 'Roboto';
+                /* color: #575757; */
+                color: black;
+                text-decoration: line-through;
+            }
+        }
+  
+        &_buy {
+            width: 100%;
+        }
+  
+        &_busket {
+            width: 100%;
+  
+        }
+      }
+    }
+  
+    &__cards {
+      display: flex;
+      flex-direction: column;
+      gap: 100px;
+      margin-top: 100px;
+    }
+  }
+  
+  @media (max-width: 1109.98px) {
+    .detail {
+      &_info {
+        grid-template-columns: 1fr 1fr;
+        position: relative;
+  
+        &_column {
+          flex-direction: column;
+        }
+  
+        &_descr {
+          width: 100%;
+        }
+        &_btns {
+          position: sticky;
+          top: 90px;
+          margin-left: auto;
+        }
+      }
+    }
+  }
+  
+  @media (max-width: 853.98px) {
+    .detail {
+      &_info {
+        display: flex;
+        flex-wrap: wrap;
+        position: relative;
+  
+        &_column {
+          flex-direction: column;
+        }
+  
+        &_descr {
+          width: 100%;
+        }
+        &_btns {
+          position: sticky;
+          top: 90px;
+          margin-left: auto;
+        }
+      }
+    }
+  }
+  
+  @media (max-width: 853.98px) {
+    .detail {
+      &_info {
+        gap: 20px;
+  
+        &_btns {
+          position: static;
+          width: 100%;
+        }
+      }
+    }
+  }
+  
+  @media (max-width: 575.98px) {
+    .detail {
+      &_info {
+        margin-top: 0;
+        gap: 40px;
+  
+        &_column {
+          gap: 20px;
+          width: 100%;
+        }
+  
+        &_descr {
+          &_name {
+            font: 700 24px/28.13px "Roboto";
+          }
+  
+          &_link {
+            margin: 20px 0;
+  
+            &_company {
+              svg {
+                display: none;
+              }
+            }
+  
+            &_brend {
+              font: 400 16px/18.09px "Roboto";
+            }
+          }
+  
+          &_block {
+            &_star {
+              font: 400 16px/18.09px "Roboto";
+            }
+  
+            &_reviews {
+              font: 400 16px/18.09px "Roboto";
+            }
+          }
+  
+          &_detail {
+            &_view {
+              font: 400 16px/18.09px "Roboto";
+            }
+          }
+          
+          max-width: 100%;
+        }
+  
+        &_btns {
+          width: 100%;
+          min-width: 285px;
+          padding: 0;
+          box-shadow: none;
+  
+          &_custom {
+            padding-left: 10px;
+            padding-right: 10px;
+          }
+  
+          &_block {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+          }
+        }
+      }
+  
+      &__cards {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        margin-top: 50px;
+      }
+    }
+  }
+  

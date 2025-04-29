@@ -1,0 +1,19 @@
+.logo{
+  width: 100px;
+  height: 40px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .logo {
+    width: 92px;
+    height: 35px;
+  }
+}
+
+@media (max-width: 425px) {
+  .logo {
+    width: 70px;
+    height: 27px;
+  }
+}

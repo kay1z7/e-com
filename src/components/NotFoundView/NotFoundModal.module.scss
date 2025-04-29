@@ -1,0 +1,45 @@
+.wrapper {
+    margin: 0 auto;
+    width: 90%; /* Используем процент для ширины */
+    max-width: 622px; /* Максимальная ширина для больших экранов */
+    text-align: center;
+    font-family: Roboto;
+    font-weight: 600;
+    font-size: 2rem; /* Используем rem вместо пикселей */
+    line-height: 1.4em;
+    margin-top: 10vh; /* Используем vh для отступа сверху */
+
+    .btn {
+        text-align: center;
+        margin: 2.5rem auto 0 auto; /* Используем rem вместо пикселей */
+        width: 80%; /* Используем процент для ширины */
+        max-width: 370px; /* Максимальная ширина для больших экранов */
+        font-weight: 600;
+        font-size: 1rem; /* Используем rem вместо пикселей */
+    }
+}
+
+/* Медиазапросы для изменения стилей на меньших экранах */
+@media (max-width: 768px) {
+    .wrapper {
+        font-size: 1.8rem;
+        margin-top: 8vh;
+    }
+
+    .btn {
+        font-size: 0.9rem;
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .wrapper {
+        font-size: 1.5rem;
+        margin-top: 5vh;
+    }
+
+    .btn {
+        font-size: 0.8rem;
+        width: 100%;
+    }
+}

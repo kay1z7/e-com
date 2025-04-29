@@ -1,0 +1,20 @@
+.block {
+    padding: 1.5rem 0 0 7rem;
+}
+.info_block {
+    width: 100%;
+    padding: 0 20px;
+    z-index: 20;
+    min-height: 38rem;
+
+    &_wrapper {
+        max-width: 1300px;
+        margin: 0 auto;
+        padding: 60px 0px 70px 0px;
+        .title {
+            margin-bottom: 24px;
+            font: 700 32px / 37.5px "Roboto";
+            color: #181818;
+        }
+    }
+}

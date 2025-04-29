@@ -1,0 +1,117 @@
+.footer {
+  width: 100%;
+  padding: 40px 20px;
+  background: #FFFFFF;
+
+
+  &_wrapper {
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+
+    &_first {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    &_logo {
+      & svg {
+        width: 145px;
+      }
+
+      font:700 24px/29.26px 'Montserrat',
+    }
+
+    &_icons {
+      display: flex;
+      gap: 16px;
+    }
+
+    &_icon {
+      & svg {
+        width: 32px;
+        height: 32px;
+      }
+    }
+
+    &_second {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+
+      &_title {
+        color: #000;
+        font: 600 20px/23.44px 'Roboto';
+      }
+
+      &_text {
+        color: #000;
+        font: 400 18px/21.09px 'Roboto';
+      }
+    }
+  }
+}
+
+@media (max-width: 767.98px) {
+  .footer {
+    padding: 24px 20px;
+
+    &_wrapper {
+      gap: 16px;
+
+      &_first {
+        gap: 16px;
+      }
+
+      &_logo {
+        // &>svg {
+        //   width: 28px;
+        //   height: 28px;
+        // }
+
+        font: 700 20px/24.38px 'Montserrat',
+      }
+
+      &_icons {
+        display: flex;
+        gap: 16px;
+      }
+
+      &_icon {
+        // &>svg {
+        //   width: 24px;
+        //   height: 24px;
+        // }
+      }
+
+      &_second {
+        &_title {
+          font: 600 16px/18.75px 'Roboto';
+        }
+
+        &_text {
+          font: 400 16px/18.75px 'Roboto';
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 575.98px) {
+  .footer {
+    padding: 10px 20px 85px 20px;
+    background: white;
+
+    &_wrapper {
+      flex-direction: column;
+      gap: 24px;
+
+      &_second {
+        gap: 8px;
+      }
+    }
+  }
+}
